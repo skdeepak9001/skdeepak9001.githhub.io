@@ -23,10 +23,9 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: 0.4s;
 }
 
-/* Toggle button */
+/* Toggle */
 .toggle {
   position: fixed;
   top: 10px;
@@ -36,7 +35,6 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
 }
 
 /* Layout */
@@ -46,15 +44,15 @@ body {
 }
 
 .left {
-  width: 28%;
-  min-width: 250px;
+  width: 30%;
+  min-width: 260px;
   background: #0f172a;
   color: white;
   padding: 25px;
 }
 
 .right {
-  width: 72%;
+  width: 70%;
   padding: 30px;
 }
 
@@ -68,9 +66,9 @@ body {
 /* Cards */
 .card {
   background: var(--card);
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
@@ -87,14 +85,9 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.1);
-}
-
-/* Typing animation */
+/* Typing */
 .typing {
   border-right: 3px solid;
   width: 0;
@@ -104,7 +97,7 @@ body {
 }
 
 @keyframes typing {
-  to { width: 260px; }
+  to { width: 300px; }
 }
 
 @keyframes blink {
@@ -116,14 +109,14 @@ body {
 
 <body>
 
-<button class="toggle" onclick="toggleMode()">🌙 Mode</button>
+<button class="toggle" onclick="toggleMode()">🌙</button>
 
 <div class="container">
 
 <!-- LEFT -->
 <div class="left">
   <h1>Deepak S</h1>
-  <p class="typing">Tech Enthusiast | Developer</p>
+  <p class="typing">CSE Student | IoT & Software Developer</p>
 
   <h3>Contact</h3>
   <p>📧 sk9001official@gmail.com</p>
@@ -131,8 +124,21 @@ body {
   <p>📍 Trichy, India</p>
 
   <h3>Skills</h3>
-  <p>C, C++, Python, Java</p>
-  <p>DSA | IoT | Full Stack</p>
+  <ul>
+    <li>C, C++, Python, Java</li>
+    <li>Data Structures & Algorithms</li>
+    <li>IoT System Design</li>
+    <li>Full Stack Development</li>
+    <li>Database: MySQL, Oracle</li>
+  </ul>
+
+  <h3>Tools & Technologies</h3>
+  <ul>
+    <li>ESP8266 / ESP32</li>
+    <li>Arduino IDE</li>
+    <li>Git & GitHub</li>
+    <li>Web Development (HTML, CSS)</li>
+  </ul>
 
   <h3>Links</h3>
   <a class="btn" href="https://github.com/skdeepak9001" target="_blank">GitHub</a>
@@ -146,33 +152,65 @@ body {
 
   <h2>About Me</h2>
   <div class="card">
-    Passionate Computer Science student focused on IoT and software development.
-    Interested in building scalable and impactful solutions.
+    I am a Computer Science undergraduate with a strong foundation in programming,
+    data structures, and IoT systems. I am passionate about developing real-world
+    applications using both hardware and software technologies. My goal is to
+    become a skilled software engineer specializing in innovative and scalable solutions.
   </div>
 
   <h2>Education</h2>
   <div class="card">
-    <b>B.Tech CSE</b><br>
-    SRM IST Trichy (2024–Present)<br>
+    <b>B.Tech in Computer Science Engineering</b><br>
+    SRM Institute of Science and Technology, Trichy<br>
+    2024 – Present<br>
     CGPA: 9.42
   </div>
 
-  <div class="card">Class XII – 80.6%</div>
-  <div class="card">Class X – 84.8%</div>
+  <div class="card">
+    <b>Higher Secondary (Class XII)</b><br>
+    Amrita Vidyalayam<br>
+    Score: 80.6%
+  </div>
+
+  <div class="card">
+    <b>Secondary School (Class X)</b><br>
+    Amrita Vidyalayam<br>
+    Score: 84.8%
+  </div>
 
   <h2>Experience</h2>
   <div class="card">
-    Intern – VDart (Full Stack Developer)
+    <b>Intern – VDart</b><br>
+    Worked as a Full Stack Developer Intern, gaining hands-on experience in
+    web technologies, backend development, and real-world project workflows.
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="card">
+    <b>Smart Agriculture IoT System 🌱</b><br>
+    Developed an IoT-based system using sensors and microcontrollers to monitor soil moisture,
+    temperature, and humidity. Automated irrigation system to improve crop efficiency.<br>
+    <b>Tech:</b> ESP8266, Sensors, IoT Platform
+  </div>
+
+  <div class="card">
+    <b>Home Automation System 🏠</b><br>
+    Built a smart home system to control appliances remotely using mobile app integration.
+    Improved energy efficiency and convenience.<br>
+    <b>Tech:</b> ESP32, Blynk, IoT
+  </div>
+
+  <div class="card">
+    <b>Portfolio Website 💻</b><br>
+    Designed and developed a personal portfolio website using HTML, CSS, and GitHub Pages
+    to showcase skills, projects, and achievements.
   </div>
 
   <h2>Certificates</h2>
   <div class="card">
-    Hackathons, MongoDB, NPTEL, Eduskills, AI, ICT
-  </div>
-
-  <h2>Projects</h2>
-  <div class="card">
-    Add your IoT / Software projects here
+    Completed certifications in Hackathons, MongoDB, NPTEL, Eduskills,
+    Generative AI, ICT Academy, and Drone Technology workshops.
   </div>
 
 </div>
@@ -186,4 +224,4 @@ function toggleMode() {
 </script>
 
 </body>
-</html>L
+</html>
