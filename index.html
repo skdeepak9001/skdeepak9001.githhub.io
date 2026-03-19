@@ -1,208 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Deepak S | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepak S | Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --card: #f1f5f9;
+}
 
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
+.dark {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: #1e293b;
+}
 
-    .left {
-      width: 28%;
-      background: #1e293b;
-      color: white;
-      padding: 30px;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
 
-    .left h1 {
-      margin-bottom: 5px;
-    }
+/* Toggle button */
+.toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  padding: 8px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-    .left p {
-      color: #cbd5e1;
-    }
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    .section {
-      margin-top: 25px;
-    }
+.left {
+  width: 28%;
+  min-width: 250px;
+  background: #0f172a;
+  color: white;
+  padding: 25px;
+}
 
-    .section h2 {
-      font-size: 18px;
-      border-bottom: 1px solid #475569;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
+.right {
+  width: 72%;
+  padding: 30px;
+}
 
-    .left ul {
-      padding-left: 18px;
-    }
+/* Responsive */
+@media(max-width: 800px) {
+  .left, .right {
+    width: 100%;
+  }
+}
 
-    .left li {
-      margin-bottom: 6px;
-    }
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
 
-    .right {
-      width: 72%;
-      padding: 40px;
-      background: white;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .right h2 {
-      border-left: 5px solid #2563eb;
-      padding-left: 10px;
-      margin-top: 30px;
-    }
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #2563eb, #38bdf8);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
 
-    .card {
-      margin-bottom: 15px;
-    }
+.btn:hover {
+  transform: scale(1.1);
+}
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
+/* Typing animation */
+.typing {
+  border-right: 3px solid;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30) forwards, blink 0.7s infinite;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+@keyframes typing {
+  to { width: 260px; }
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background: #2563eb;
-      color: white;
-      border-radius: 5px;
-    }
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 
-    .btn:hover {
-      background: #1d4ed8;
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
+<button class="toggle" onclick="toggleMode()">🌙 Mode</button>
+
 <div class="container">
 
-  <!-- LEFT PANEL -->
-  <div class="left">
-    <h1>Deepak S</h1>
-    <p>Tech Enthusiast</p>
+<!-- LEFT -->
+<div class="left">
+  <h1>Deepak S</h1>
+  <p class="typing">Tech Enthusiast | Developer</p>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <p>Email: sk9001official@gmail.com</p>
-      <p>Phone: 9842354863</p>
-      <p>Trichy, India</p>
-    </div>
+  <h3>Contact</h3>
+  <p>📧 sk9001official@gmail.com</p>
+  <p>📱 9842354863</p>
+  <p>📍 Trichy, India</p>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>C, C++, Python, Java</li>
-        <li>Data Structures & Algorithms</li>
-        <li>IoT Development</li>
-        <li>Full Stack Development</li>
-        <li>MySQL, Oracle</li>
-      </ul>
-    </div>
+  <h3>Skills</h3>
+  <p>C, C++, Python, Java</p>
+  <p>DSA | IoT | Full Stack</p>
 
-    <div class="section">
-      <h2>Languages</h2>
-      <ul>
-        <li>English</li>
-        <li>Tamil</li>
-        <li>Hindi</li>
-      </ul>
-    </div>
+  <h3>Links</h3>
+  <a class="btn" href="https://github.com/skdeepak9001" target="_blank">GitHub</a>
+  <a class="btn" href="#" target="_blank">LinkedIn</a>
+  <a class="btn" href="resume.pdf" target="_blank">Resume</a>
 
-    <div class="section">
-      <h2>Interests</h2>
-      <ul>
-        <li>Robotics</li>
-        <li>Artificial Intelligence</li>
-        <li>IoT</li>
-        <li>Problem Solving</li>
-        <li>Drone Tech</li>
-      </ul>
-    </div>
+</div>
 
-    <div class="section">
-      <h2>Resume</h2>
-      <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
-    </div>
+<!-- RIGHT -->
+<div class="right">
+
+  <h2>About Me</h2>
+  <div class="card">
+    Passionate Computer Science student focused on IoT and software development.
+    Interested in building scalable and impactful solutions.
   </div>
 
-  <!-- RIGHT PANEL -->
-  <div class="right">
+  <h2>Education</h2>
+  <div class="card">
+    <b>B.Tech CSE</b><br>
+    SRM IST Trichy (2024–Present)<br>
+    CGPA: 9.42
+  </div>
 
-    <h2>About Me</h2>
-    <p>
-      Computer Science undergraduate with strong knowledge in programming and IoT systems.
-      Passionate about building scalable applications and solving real-world problems.
-    </p>
+  <div class="card">Class XII – 80.6%</div>
+  <div class="card">Class X – 84.8%</div>
 
-    <h2>Education</h2>
+  <h2>Experience</h2>
+  <div class="card">
+    Intern – VDart (Full Stack Developer)
+  </div>
 
-    <div class="card">
-      <b>B.Tech CSE</b><br>
-      SRM Institute of Science and Technology, Trichy<br>
-      2024 – Present<br>
-      CGPA: 9.42
-    </div>
+  <h2>Certificates</h2>
+  <div class="card">
+    Hackathons, MongoDB, NPTEL, Eduskills, AI, ICT
+  </div>
 
-    <div class="card">
-      <b>Class XII</b><br>
-      Amrita Vidyalayam<br>
-      2022 – 2023<br>
-      Score: 80.6%
-    </div>
-
-    <div class="card">
-      <b>Class X</b><br>
-      Amrita Vidyalayam<br>
-      2020 – 2021<br>
-      Score: 84.8%
-    </div>
-
-    <h2>Experience</h2>
-    <div class="card">
-      <b>Intern – VDart</b><br>
-      Role: Full Stack Developer<br>
-      Location: Trichy
-    </div>
-
-    <h2>Certificates</h2>
-    <ul>
-      <li>Hackathons</li>
-      <li>Codeathon</li>
-      <li>MongoDB</li>
-      <li>Coursera</li>
-      <li>NPTEL</li>
-      <li>Eduskills</li>
-      <li>Generative & Agentic AI</li>
-      <li>ICT Academy</li>
-      <li>Drone Workshop</li>
-    </ul>
-
-    <h2>Projects (Add later)</h2>
-    <p>Coming soon...</p>
-
+  <h2>Projects</h2>
+  <div class="card">
+    Add your IoT / Software projects here
   </div>
 
 </div>
 
+</div>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
-</html>
+</html>L
